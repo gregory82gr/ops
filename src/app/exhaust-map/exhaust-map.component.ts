@@ -93,7 +93,11 @@ export class ExhaustMapComponent  implements OnInit,AfterViewInit{
           return interval(500)
         })
       )
-      .subscribe( val => console.log(val));
+      .subscribe({
+        next:value=>{
+          console.log(value)
+        }
+      });
   }
   
 }
